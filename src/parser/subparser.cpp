@@ -760,6 +760,13 @@ void explodeTrojan(std::string trojan, Proxy &node)
         network = "ws";
     }
 
+    // modified by john
+    if(getUrlArg(addition, "type") == "1")
+    {
+        path = getUrlArg(addition, "path");
+        network = "ws";
+    }
+
     if(remark.empty())
         remark = server + ":" + port;
     if(group.empty())
